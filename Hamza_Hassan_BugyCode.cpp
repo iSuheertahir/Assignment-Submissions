@@ -1,55 +1,35 @@
 #include <iostream>
-#include <assert.h>                       // header file for assertion (a part of unit testing)
+#include <iomanip>
+
 using namespace std;
 
 int main()
 {
-	cout << "This program will crash\n"
+	cout << "\n             This Program Will Accumulate Input Numbers Until \n                   The User Enters a Negative Number, \n                      Then It Returns The Average\n"
 		 << endl;
 
-	float nSum;
-	int nNums;
-
-	// accumulate input numbers until the
-	// user enteres a negative number, then
-	// return the average
+	float total_Sum = 0.0;                     
+	int total_Nums  = 0;                    
+    float Value;
+	float rslt;                   
 	
-	nNums = 0;
 	while(true)
-	{
-		// enter another number to add
-		float nValue;
-		cout << "Enter another number: ";
-		cin >> nValue;
+	{                         
+		cout << "\n - Enter Any Number: ";
+		cin  >> Value;
 		cout << endl;
 
-		// if the input number is negative...
-		if(nValue < 0)
+		if(Value < 0)
 		{
-			// ... then output the average
-			
-			cout << "what you think the average will be: ";          // Expected Output i-e: Average
-			int your_avg;
-			cin >> your_avg;
-			cout << endl; 
-			 
-			int actual_avg = nSum/nNums;
-			
-			assert(actual_avg == your_avg);             // if this assertion failed, the logic of calculating average is Incorrect!
-			
-			cout << "\nAverage is: "
-				 << actual_avg
-				 << endl;
-				 
-			
-			break;
+			rslt = total_Sum / total_Nums;
+			cout << "\n\n - Average is = " << fixed << setprecision(1) << total_Sum << " / " << total_Nums << " = "
+			     << rslt << endl;	               
+			break; 
 		}
-
-		// not negative, add the value to
-		// the accumulator
-		nSum += nValue;
+		
+		total_Sum += Value;         
+		total_Nums += 1;
+		                
 	}
-
-	cin.ignore(10000, '\n');
-	return 0;
+	
 }
