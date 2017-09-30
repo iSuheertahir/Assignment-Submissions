@@ -77,6 +77,7 @@ for(int x=1; x<=10; x++)
 cout<<array[x];
 
 "Why doesn't it output the correct values?"
+ans: array index always start at zero so the output will be wrong
 
 
 8: Integer division
