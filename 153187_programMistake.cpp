@@ -9,16 +9,17 @@ cout<<x;
 //"Huh? Why do I get an error?"
 //Ans: declare the variable x before using it 
 
-2: Uninitialized variables:
+//2: Uninitialized variables:
 
-int count;
+int count=0;
 while(count<100)
 {
 cout<<count;
+count++;
 }
 
-"Why doesn't my program enter the while loop?"
-
+//"Why doesn't my program enter the while loop?"
+//Ans: initialize the varible with zero to avoid the garbage values
 
 3: Setting a variable to an uninitialized value:
 
