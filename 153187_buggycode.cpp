@@ -8,13 +8,13 @@ int main()
 	cout << "This program will crash"
 		 << endl;
 // initialize the sum with the 0
-	float nSum=0.0;
-	float nNums;
+	int nSum=0;
+	int nNums;
 
 	// accumulate input numbers until the
 	// user enteres a negative number, then
 	// return the average
-	nNums = 0.0;
+	nNums = 0;
 	while(true)
 	{
 		// enter another number to add
@@ -43,6 +43,7 @@ int main()
 
 		// not negative, add the value to
 		// the accumulator
+                nNums++;
 		nSum += nValue;
 	}
 
