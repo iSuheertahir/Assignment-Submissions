@@ -50,7 +50,7 @@ cin>>x;
 Ans: use == operator for comparison = operator is for assigning
 
 5: Undeclared Functions:
-
+void menu()
 int main()
 {
 menu();
@@ -61,7 +61,7 @@ void menu()
 }
 
 "Why do I get an error about menu being unknown?"
-
+Ans: you have to declare the function before using it
 6: Extra Semicolons:
 
 for(int x=0; x<100; x++);
