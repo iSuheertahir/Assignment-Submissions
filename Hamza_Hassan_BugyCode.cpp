@@ -1,6 +1,5 @@
 #include <iostream>
 #include <iomanip>
-
 using namespace std;
 
 int main()
@@ -18,18 +17,29 @@ int main()
 		cout << "\n - Enter Any Number: ";
 		cin  >> Value;
 		cout << endl;
+		
+		if(cin.fail() || cin.get() != '\n')
+	    {
+	  	    cout << "Not A Number - Try Again!" << endl << endl;
+	  	    cin.clear();
+	  	    cin.ignore(256,'\n');     
+	    }
 
-		if(Value < 0)
+		else if(Value < 0)
 		{
 			rslt = total_Sum / total_Nums;
 			cout << "\n\n - Average is = " << fixed << setprecision(1) << total_Sum << " / " << total_Nums << " = "
-			     << rslt << endl;	               
+			     << rslt << endl;              
 			break; 
 		}
 		
-		total_Sum += Value;         
-		total_Nums += 1;
-		                
+		else
+		{
+			total_Sum += Value;         
+		    total_Nums += 1;
+		}
+			                
 	}
-	
+
+	return 0;
 }
