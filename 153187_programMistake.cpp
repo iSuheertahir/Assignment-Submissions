@@ -46,7 +46,8 @@ cin>>x;
 }
 
 "Why doesn't my loop ever end?"
- 
+
+Ans: use == operator for comparison = operator is for assigning
 
 5: Undeclared Functions:
 
