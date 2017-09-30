@@ -85,7 +85,8 @@ ans: array index always start at zero so the output will be wrong
 For example:
 double half = 1/2;
 
-This code sets half to 0 not 0.5! Why? Because 1 and 2 are integer constants.
+This code sets half to 0 not 0.5! Why? 
+Ans:Because 1 and 2 are integer constants.
 
 
 9: Variable Name Styles
