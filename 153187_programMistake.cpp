@@ -125,3 +125,4 @@ value=10;
 }while(!(value==10) || !(value==20))
 
 "Huh? Even though value is 10 the program loops. Why?"
+Ans : be carefull using || and && operator
