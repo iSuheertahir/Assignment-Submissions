@@ -64,11 +64,11 @@ void menu()
 Ans: you have to declare the function before using it
 6: Extra Semicolons:
 
-for(int x=0; x<100; x++);
+for(int x=0; x<100; x++)
 cout<<x;
 
 "Why does it output 100?"
-
+Ans: no it will end at 99
 7: Overstepping array boundaries:
 
 int array[10];
