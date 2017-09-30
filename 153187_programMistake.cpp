@@ -21,19 +21,20 @@ count++;
 //"Why doesn't my program enter the while loop?"
 //Ans: initialize the varible with zero to avoid the garbage values
 
-3: Setting a variable to an uninitialized value:
+//3: Setting a variable to an uninitialized value:
 
 int a, b;
-int sum=a+b;
+int sum=0;
 cout<<"Enter two numbers to add: ";
-cin>>b;
+cin>>b>>a;
+sum=a+b;
 cout<<"The sum is: "<<sum;
-When Run:
-Enter two numbers to add: 1 3
-The sum is: -1393
+//When Run:
+//Enter two numbers to add: 1 3
+//The sum is: -1393
 
-"What's wrong with my program?"
-
+//"What's wrong with my program?"
+//Ans: ypu have to initialize the variable with zero and use the assignment after user nput the values
 4: Using a single equal sign to check equality:
 
 char x='Y';
