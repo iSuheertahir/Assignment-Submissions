@@ -1,5 +1,5 @@
 // 1: Undeclared Variables:
-
+// solve all the questions
 //header files is not included.
 #include<iostream>
 //not use of 
