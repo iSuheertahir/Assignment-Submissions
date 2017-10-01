@@ -14,10 +14,12 @@ int main()
 	// user enteres a negative number, then
 	// return the average
 	nNums = 0;
+	//BuggyCode Fix 3: Brought 'nValue' declaration out of the loop (153169 Ahmed Jamil)
+	int nValue;
 	while(true)
 	{
 		// enter another number to add
-		int nValue;
+		
 		cout << "Enter another number:";
 		cin >> nValue;
 		cout << endl;
