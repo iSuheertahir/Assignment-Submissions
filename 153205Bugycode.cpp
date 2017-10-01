@@ -1,11 +1,12 @@
 // Read code below and try to identify any bug and then fix it. 
+#include<iostream>
+#include<conio.h>
+#include<studio.h>
+using namespace std;
 
 int main()
 {
-	cout << "This program will crash"
-		 << endl;
-
-	int nSum;
+	int nSum=0;
 	int nNums;
 
 	// accumulate input numbers until the
@@ -32,6 +33,7 @@ int main()
 
 		// not negative, add the value to
 		// the accumulator
+		nNums++;
 		nSum += nValue;
 	}
 
