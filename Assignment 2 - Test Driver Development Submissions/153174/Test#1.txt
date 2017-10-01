@@ -1,0 +1,172 @@
+// Lab# 2 (22 Sept, 2017)
+// Roll# 153174
+
+// TDD on Factorial
+
+
+#include <iostream>
+
+using namespace std;
+
+int ZeroFactoriaisone(int);
+int OneFactoriaisone(int);
+int TwoFactoriaistwo(int);
+int ThreeFactoriaissix(int);
+int FiveFactoriaisonetwenty(int);
+
+int main()
+{
+	int result;
+	char choice;
+	
+	cout << "\t\t       The program is a Test run of Factorial.\n";
+	cout << "\t    Lets test the Factorials of Zero, one, two, three and five.\n";
+	cout << "\t---------------------------------------------------------------------\n";
+	
+	//performing a test for Zerofactoriaisone()
+   do {
+        cout << "Testing a test for Zerofactoriaisone.\n";
+   cout << "calling the Factorial Function with argument."<< endl;
+   cout << "the given value is "<< 0 << " and ";
+   cout << "The result is " << ZeroFactoriaisone(0) <<endl;
+   cout << endl;
+
+   cout << "If the Answer is wrong, enter Y to test again: ";
+   cin >> choice;
+   }while(choice=='Y' || choice=='y');
+   cout << endl; 
+	
+    //performing a test for OneFactoriaisone()
+   do {
+        cout << "Testing a test for OneFactoriaisone.\n";
+   cout << "calling the Factorial Function with argument."<< endl;
+   cout << "the given value is "<< 0 << " and ";
+   cout << "The result is " << OneFactoriaisone(1) <<endl;
+   cout << endl;
+
+   cout << "If the Answer is wrong, enter Y to test again: ";
+   cin >> choice;
+   }while(choice=='Y' || choice=='y');
+   cout << endl; 
+   
+    //performing a test for TwoFactoriaistwo()
+   do {
+        cout << "Testing a test for TwoFactoriaistwo().\n";
+   cout << "calling the Factorial Function with argument."<< endl;
+   cout << "the given value is "<< 0 << " and ";
+   cout << "The result is " << TwoFactoriaistwo(2) <<endl;
+   cout << endl;
+
+   cout << "If the Answer is wrong, enter Y to test again: ";
+   cin >> choice;
+   }while(choice=='Y' || choice=='y');
+   cout << endl; 
+    
+     //performing a test for ThreeFactoriaissix()
+   do {
+        cout << "Testing a test for ThreeFactoriaissix().\n";
+   cout << "calling the Factorial Function with argument."<< endl;
+   cout << "the given value is "<< 0 << " and ";
+   cout << "The result is " << ThreeFactoriaissix(3) <<endl;
+   cout << endl;
+
+   cout << "If the Answer is wrong, enter Y to test again: ";
+   cin >> choice;
+   }while(choice=='Y' || choice=='y');
+   
+   cout << endl; 
+     //performing a test for FiveFactoriaisonetwenty()
+   do {
+        cout << "Testing a test for FiveFactoriaisonetwenty().\n";
+   cout << "calling the Factorial Function with argument."<< endl;
+   cout << "the given value is "<< 0 << " and ";
+   cout << "The result is " << FiveFactoriaisonetwenty(5) <<endl;
+   cout << endl;
+
+   cout << "If the Answer is wrong, enter Y to test again: ";
+   cin >> choice;
+   }while(choice=='Y' || choice=='y');
+	cout << endl; 
+	
+	return 0;
+}
+
+//*********************************************************************
+// FUNC: Zerofactoriaisone()
+// operation: to check if the factorial of zero is 1
+// INPUT: 0 (initialized)
+// OUTPUT: should be 1.
+
+int ZeroFactoriaisone(int n)
+{
+	cout << "In the Func: ZeroFactoriaisone. \n";
+	cout << "The Factorial of " << n << " is ";
+	
+	if (n == 0) 
+		return 1;
+}
+//*********************************************************************
+
+//*********************************************************************
+// FUNC: Onefactoriaisone()
+// operation: to check if the factorial of 1 is 1
+// INPUT: 1 (initialized)
+// OUTPUT: should be 1.
+
+int OneFactoriaisone(int n)
+{
+	cout << "In the Func: OneFactoriaisone. \n";
+	cout << "The Factorial of " << n <<" is ";
+	
+	if (n == 1) 
+		return 1;
+}
+//*********************************************************************
+
+
+//*********************************************************************
+// FUNC: TwoFactoriaistwo()
+// operation: to check if the factorial of 2 is 2
+// INPUT: 2 (initialized)
+// OUTPUT: should be 2.
+int TwoFactoriaistwo(int n)
+{
+	cout << "In the Func: TwoFactoriaistwo. \n";
+	cout << "The Factorial of " << n <<" is ";
+	
+	if (n == 2) 
+		return 2;
+}
+//*********************************************************************
+
+
+//*********************************************************************
+// FUNC: ThreeFactoriaissix()
+// operation: to check if the factorial of 3 is 6
+// INPUT: 3 (initialized)
+// OUTPUT: should be 6.
+int ThreeFactoriaissix(int n)
+{
+	cout << "In the Func: ThreeFactoriaissix. \n";
+	cout << "The Factorial of " << n <<" is ";
+	
+	if (n == 3) 
+		return 6;
+}
+//*********************************************************************
+
+
+//*********************************************************************
+// FUNC: FiveFactoriaisonetwenty()
+// operation: to check if the factorial of 5 is 120
+// INPUT: 5 (initialized)
+// OUTPUT: should be 120.
+int FiveFactoriaisonetwenty(int n)
+{
+	cout << "In the Func: FiveFactoriaisonetwenty. \n";
+	cout << "The Factorial of " << n <<" is ";
+	
+	if (n == 5) 
+		return 120;
+}
+//*********************************************************************

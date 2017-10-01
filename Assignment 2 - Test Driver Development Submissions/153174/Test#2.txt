@@ -1,0 +1,27 @@
+// Roll# 153174
+
+#include <iostream>
+#include <limits>
+
+using namespace std;
+
+int main ()
+{
+	int n;
+
+	cout << "Enter a Positive number: ";
+	cin >> n;
+		while (n<0 || cin.fail())
+	{
+		cout << endl;
+        cin.clear(); // clear input buffer to restore cin to a usable state
+        cin.ignore(INT_MAX, '\n'); // ignore last input
+        cout << "Invalid entry.\n";
+        cout << "Enter a Positive number.\n";
+        cin >> n;
+    }
+    
+    cout <<"Input is " << n; // Decimal part is ignored due to data type "int"
+	
+	return 0;
+}
