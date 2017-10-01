@@ -79,11 +79,13 @@ cout<<x;
 
 "Why does it output 100?"
 
+
+//Programming Mistakes Fix 7: fixed condition for overstepping array loop (153169 Ahmed Jamil)
 7: Overstepping array boundaries:
 
 int array[10];
 //...
-for(int x=1; x<=10; x++)
+for(int x=1; x<10; x++)
 cout<<array[x];
 
 "Why doesn't it output the correct values?"
