@@ -1,0 +1,274 @@
+1: Undeclared Variables:
+
+int main()
+{
+cin>>x;
+cout<<x;
+}
+
+"Huh? Why do I get an error?"
+
+	The varible 'x' isn't declared within the scope of the main
+	function, therefore, it doesn't work.
+	In order to operate, it should be like this:
+
+	int main()
+	{
+		datatype x;
+		cin>>x;
+		cout<<x;
+	}
+
+	The datatype could possibly be the choice of programmer, for
+	what he/she, want the type of input to be entered and displayed.
+	int, char, string, float, double... These are some of the datatypes
+	mentioned that is to be explicitly mentioned, insted of the word
+	'datatype' written in the above code in main function...
+ 
+x---------------------------------------------------------------------x
+
+2: Uninitialized variables:
+
+int count;
+while(count<100)
+{
+cout<<count;
+}
+
+"Why doesn't my program enter the while loop?"
+
+	The varible declared is not initialized, i.e. it has not been
+	assigned a default value, therefore, it is quite possible
+	that there might be some garbage value that resides in the
+	declared but uninitialized varible already, which might be less
+	than 100.
+
+x---------------------------------------------------------------------x
+
+3: Setting a variable to an uninitialized value:
+
+int a, b;
+int sum=a+b;
+cout<<"Enter two numbers to add: ";
+cin>>b;
+cout<<"The sum is: "<<sum;
+When Run:
+Enter two numbers to add: 1 3
+The sum is: -1393
+
+"What's wrong with my program?"
+
+	The sum of the two uninitialized variables 'a' and 'b' is assigned
+	to the varible sum. Being uninitialized, just so as it happens
+	to be, these variables 'a' and 'b' have some garbage value in
+	them, that adds up to be equal to the number '-1393'. The values
+	are later entered by the user in the variables 'a' and 'b',
+	regerdless of the fact there is no summation done afer input
+	that is stored in the variable sum! Furthermore, according to the
+	code, the user inputs only a single value in variable 'b' and no 
+	input is taken for variable 'a'.
+	Therefore, the correct code would be: 
+
+		int a, b, sum;
+		cout << "Enter two numbers to add: " << endl;
+		cin >> b;
+		cin >> a;
+		sum = a + b;
+		cout << "The sum is: "<<sum;
+		When Run:
+		Enter two numbers to add: 
+		1
+		3
+		The sum is: 4
+
+x---------------------------------------------------------------------x
+
+4: Using a single equal sign to check equality:
+
+char x='Y';
+while(x='Y')
+{
+//...
+cout<<"Continue? (Y/N)";
+cin>>x;
+}
+
+"Why doesn't my loop ever end?"
+
+	The while loop keeps on repeating itself until and unless the
+	condition stated is turned false. In this case, the variable
+	is assigned the value of the character 'Y', first on its declaration,
+	second in the while loop's condition checking area. What happens is,
+	The value of 'Y' is constantly assigned to x, whenever the conditional
+	comparison happens in the while loop and hence, an endless loop
+	executes...
+	The correct code would be:
+		
+		char x='Y';
+		while(x=='Y')
+		{
+			//...
+			cout<<"Continue? (Y/N)";
+			cin>>x;
+		}
+	
+	The double equal sign compares the value in the variable x with the
+	charachter 'Y' (in the condition checking area of the while loop)
+	and operates if the comparison is true.
+
+x---------------------------------------------------------------------x 
+
+5: Undeclared Functions:
+
+int main()
+{
+menu();
+}
+void menu()
+{
+//...
+}
+
+"Why do I get an error about menu being unknown?"
+
+	There are two ways to to write functions.
+	1) by declaring a function with all it's complete details before
+	   the main() function. e.g.
+
+			void menu()
+			{
+				//...
+			}
+			int main()
+			{
+				menu();
+			}
+
+	2) by declaring the function's prototype first (only returntype of function
+	   with its name and the datatype of variables being passed into it as arguments),
+	   and defining the complete function after the main() function has ended. e.g.
+
+			void menu(); //The function's prototype
+			int main()
+			{
+				menu();
+			}
+			void menu()
+			{
+				//...
+			}
+
+x---------------------------------------------------------------------x
+
+6: Extra Semicolons:
+
+for(int x=0; x<100; x++);
+cout<<x;
+
+"Why does it output 100?"
+
+	The syntax is incorrect. For a 'for loop', there are no semicolons
+	outside the condition stating paranthesis.
+	The correct syntax for this loop to operate is:
+
+		for(int x = 0; x < 100; x++)
+		{
+			cout << x;
+		}
+
+x---------------------------------------------------------------------x
+
+7: Overstepping array boundaries:
+
+int array[10];
+//...
+for(int x=1; x<=10; x++)
+cout<<array[x];
+
+"Why doesn't it output the correct values?"
+
+	When an array of ten elements is declared, it means that the starting
+	index of the array is from 0 (zero) till one less than the stated size
+	of the array, 9 (nine) in this case. Although the loop above operates
+	10 times, but it skips the element at index 0 and prints on the screen
+	element value stored at index 1, and goes one index further than the
+	actual bound of the loop, thus stating a garbage value for the last output.
+	The correct code would be:
+
+		int array[10];
+		//...
+		for(int x=0; x<10; x++)
+		{
+			cout<<array[x];
+		}
+
+x---------------------------------------------------------------------x
+
+8: Integer division
+
+double half = 1/2;
+
+This code sets half to 0 not 0.5! Why?
+
+	As 1 and 2 are integer constants, the value stored in the variable
+	would be an integer. If only, the numerator was of the double datatype
+	the result stored in the variable would have been a double.
+
+		double half = 1.0 / 2;
+
+	Another way was if both the numerator and the denominator both had
+	values with a decimal point in them.
+
+		double half = 1.0 / 2.0;
+
+x---------------------------------------------------------------------x
+
+9: Variable Name Styles
+
+Take a look at the below program. Can you see anything wrong?
+
+#include <stdio.h>
+#include <string.h>
+
+main()
+{
+char CatName[20] = "fluffy";
+char dogName[20] = "fido";
+char rat_Name[20] = "fester";
+int Catage = 3;
+int dogs_age = 4;
+int ratage = 1;
+char myPet[20];
+int itsAge;
+
+strcpy(myPet,rat_Name);
+itsAge = ratage;
+printf("My pet is %s\n",myPet);
+}
+
+Besides the obviously bizarre choice of having a pet rat, do you notice anything? 
+
+	The main() function does not state a return type.
+
+x---------------------------------------------------------------------x
+
+10 Misusing the && and || operators:
+
+int value;
+do
+{
+//...
+value=10;
+}while(!(value==10) || !(value==20))
+
+"Huh? Even though value is 10 the program loops. Why?"
+
+	The program loops because the loop operates only as according to the
+	conditional statement. But the improper use of the operator causes
+	improper functioning of the loop.
+	The || operator operates in the condition as if any of the stated value
+	or both of thr stated value is true, the overall condition is returned as
+	true. The && operator returns the overall value of the condition as true
+	only if both the stated conditions are true.
+
+x---------------------------------------------------------------------x
