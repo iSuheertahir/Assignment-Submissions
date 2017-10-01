@@ -91,10 +91,11 @@ cout<<array[x];
 "Why doesn't it output the correct values?"
 
 
+//Programming Mistakes Fix 8: Casted numerator to double (153169 Ahmed Jamil)
 8: Integer division
 
 For example:
-double half = 1/2;
+double half = (double)>1/2;
 
 This code sets half to 0 not 0.5! Why? Because 1 and 2 are integer constants.
 
