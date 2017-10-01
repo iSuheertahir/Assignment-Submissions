@@ -4,10 +4,10 @@ using namespace std;
 
 int main()
 {
-	cout << "This program will crash"
+	cout << "This program will not crash now"
 		 << endl;
 	//BuggyCode Fix 2: Changed 'nSum' datatype to 'float' and initialized to 0 (153169 Ahmed Jamil)
-	int nSum;
+	float nSum = 0;
 	int nNums;
 
 	// accumulate input numbers until the
@@ -37,6 +37,8 @@ int main()
 		// not negative, add the value to
 		// the accumulator
 		nSum += nValue;
+		//BuggyCode Fix 4: Incremeted 'nNums' at the end of loop (153169 Ahmed Jamil)
+		nNums++;
 	}
 
 	cin.ignore(10000, '\n');
