@@ -20,6 +20,14 @@ int main()
 		cout << "Enter another number:";
 		cin >> nValue;
 		cout << endl;
+while (cin.fail()) // Input Validation: Accept only Integers.
+{
+cin.clear();
+ cin.ignore();
+cout << "Invalid Input. Enter an Integer as a Number: " << endl;
+cin >> nValue;
+}
+// if the input number is negative...
 
 		// if the input number is negative...
 		if(nValue < 0)
