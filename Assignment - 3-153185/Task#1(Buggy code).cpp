@@ -7,7 +7,7 @@
 //Header files
 #include<iostream>
 using namespace std;
-
+//main function
 int main()
 {
 	cout << "This program will crash"
