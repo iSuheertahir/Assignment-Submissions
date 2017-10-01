@@ -6,7 +6,7 @@ int main()
 {
 	cout << "This program will crash"
 		 << endl;
-
+	//BuggyCode Fix 2: Changed 'nSum' datatype to 'float' and initialized to 0 (153169 Ahmed Jamil)
 	int nSum;
 	int nNums;
 
