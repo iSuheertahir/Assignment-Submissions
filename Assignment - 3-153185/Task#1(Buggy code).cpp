@@ -24,12 +24,32 @@ int main()
 
 	while(true)
 	{
-		// enter another number to add
-		int nValue;
-		cout << "Enter another number:";
+		//input validation
+		
+		// label 
+		CheckInput:
+		
+		//prompt
+		cout << "Enter a number:";
+		
+		//tking input
 		cin >> nValue;
 		cout << endl;
-
+		
+		//loop to check input
+		//while(!(cin.good())||cin.get() != '\n')
+		while((cin.fail())||cin.get() != '\n') 
+		{
+			cin.clear();
+			
+			//used for input validation
+    	   	cin.ignore(256,'\n');
+       		cout<< "Wrong input!!!  "<<endl;
+       		cout<<"Enter Again"<<endl;
+       		//Goto Statement
+       	 	goto CheckInput;
+    	}
+	
 		// if the input number is negative...
 		if(nValue < 0)
 		{
