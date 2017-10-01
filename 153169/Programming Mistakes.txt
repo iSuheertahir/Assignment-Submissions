@@ -25,11 +25,11 @@ count++;
 
 
 3: Setting a variable to an uninitialized value:
-
+Programming Mistakes Fix 3: Placed 'int sum=a+b' after inputs (153169 Ahmed Jamil)
 int a, b;
-int sum=a+b;
 cout<<"Enter two numbers to add: ";
-cin>>b;
+cin>>a>>b;
+int sum=a+b;
 cout<<"The sum is: "<<sum;
 When Run:
 Enter two numbers to add: 1 3
