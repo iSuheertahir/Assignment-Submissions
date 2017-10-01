@@ -18,6 +18,7 @@ int count =0;
 while(count<100)
 {
 cout<<count;
+
 count++;
 }
 
@@ -51,8 +52,10 @@ cin>>x;
 "Why doesn't my loop ever end?"
  
 
+//Programming Mistakes Fix 5: Added header for menu() function (153169 Ahmed Jamil)
 5: Undeclared Functions:
 
+void menu();
 int main()
 {
 menu();
