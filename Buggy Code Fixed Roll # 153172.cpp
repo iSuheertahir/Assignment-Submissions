@@ -13,20 +13,29 @@ int main()
 	cout << "This program will crash"
 		 << endl;
 //Initializing the Sum with Zero
-	int nSum=0;
-	int nNums;
+	float nSum=0.0;
+	float nNums;
 
 	// accumulate input numbers until the
 	// user enteres a negative number, then
 	// return the average
-	nNums = 0;
+	nNums = 0.0;
 	while(true)
 	{
 		// enter another number to add
-		int nValue;
+	        Label:
+		float nValue;
 		cout << "Enter another number:";
 		cin >> nValue;
 		cout << endl;
+		while(cin.fail()||cin.get() != '\n') 
+		{
+		cin.clear();
+		cin.clear();
+                cin.ignore(256,'\n');
+       cout<< "Please re-enter:  "<<endl;
+        goto Label;
+	}
 
 		// if the input number is negative...
 		if(nValue < 0)
