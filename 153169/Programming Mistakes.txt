@@ -99,7 +99,7 @@ double half = (double)>1/2;
 
 This code sets half to 0 not 0.5! Why? Because 1 and 2 are integer constants.
 
-
+//Programming Mistakes Fix 9: Corrected variable names (153169 Ahmed Jamil)
 9: Variable Name Styles
 
 Take a look at the below program. Can you see anything wrong?
@@ -109,17 +109,17 @@ Take a look at the below program. Can you see anything wrong?
 
 main()
 {
-char CatName[20] = "fluffy";
+char catName[20] = "fluffy";
 char dogName[20] = "fido";
-char rat_Name[20] = "fester";
-int Catage = 3;
-int dogs_age = 4;
-int ratage = 1;
+char ratName[20] = "fester";
+int catAge = 3;
+int dogAge = 4;
+int ratAge = 1;
 char myPet[20];
-int itsAge;
+int myPetAge;
 
-strcpy(myPet,rat_Name);
-itsAge = ratage;
+strcpy(myPet,ratName);
+myPetAge = ratAge;
 printf("My pet is %s\n",myPet);
 }
 
