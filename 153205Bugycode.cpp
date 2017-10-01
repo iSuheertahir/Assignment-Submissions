@@ -16,12 +16,20 @@ int main()
 	while(true)
 	{
 		// enter another number to add
+		label:
 		float nValue;
 		cout << "Enter another number:";
 		cin >> nValue;
 		cout << endl;
 
 		// if the input number is negative...
+		while(cin.fail()||cin.get() != '\n') {
+		cin.clear();
+		cin.clear();
+      		cin.ignore(256,'\n');
+       		cout<< "Please re-enter:  "<<endl;
+       		 goto label;
+    }
 		if(nValue < 0)
 		{
 			// ... then output the average
