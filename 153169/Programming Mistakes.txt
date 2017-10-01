@@ -13,10 +13,12 @@ cout<<x;
 
 2: Uninitialized variables:
 
-int count;
+//Programming Mistakes Fix 2: Initialized 'count' to 0 and incremented at end of loop (153169 Ahmed Jamil)
+int count =0;
 while(count<100)
 {
 cout<<count;
+count++;
 }
 
 "Why doesn't my program enter the while loop?"
