@@ -25,6 +25,8 @@ count++;
 "Why doesn't my program enter the while loop?"
 
 
+
+
 3: Setting a variable to an uninitialized value:
 //Programming Mistakes Fix 3: Placed 'int sum=a+b' after inputs (153169 Ahmed Jamil)
 int a, b;
@@ -67,9 +69,12 @@ void menu()
 
 "Why do I get an error about menu being unknown?"
 
+
+
+//Programming Mistakes Fix 6: Removed extra semicoln after for loop (153169 Ahmed Jamil)
 6: Extra Semicolons:
 
-for(int x=0; x<100; x++);
+for(int x=0; x<100; x++)
 cout<<x;
 
 "Why does it output 100?"
