@@ -25,7 +25,7 @@ count++;
 
 
 3: Setting a variable to an uninitialized value:
-Programming Mistakes Fix 3: Placed 'int sum=a+b' after inputs (153169 Ahmed Jamil)
+//Programming Mistakes Fix 3: Placed 'int sum=a+b' after inputs (153169 Ahmed Jamil)
 int a, b;
 cout<<"Enter two numbers to add: ";
 cin>>a>>b;
@@ -37,10 +37,11 @@ The sum is: -1393
 
 "What's wrong with my program?"
 
+//Programming Mistakes Fix 4: replaced x='Y' with x=='Y' (153169 Ahmed Jamil)
 4: Using a single equal sign to check equality:
 
 char x='Y';
-while(x='Y')
+while(x=='Y')
 {
 //...
 cout<<"Continue? (Y/N)";
