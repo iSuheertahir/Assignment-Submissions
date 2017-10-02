@@ -84,12 +84,17 @@ cout<<x;
 
 7: Overstepping array boundaries:
 
+#include <iostream>
+using namespace std;
+int main()
+{
 int array[10];
 //...
-for(int x=1; x<=10; x++)
+for(int x=0; x<=10; x++)
 cout<<array[x];
-
+}
 "Why doesn't it output the correct values?"
+ //ANSWER: Because array's index was not initiazlied correct as '0'.
 
 
 8: Integer division
