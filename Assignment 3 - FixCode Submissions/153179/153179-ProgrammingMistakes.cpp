@@ -72,10 +72,15 @@ void menu()
  
 6: Extra Semicolons:
 
-for(int x=0; x<100; x++);
+#include <iostream>
+using namespace std;
+int main()
+{
+ for(int x=0; x<100; x++); // Unecessary semicolon removed
 cout<<x;
-
+}
 "Why does it output 100?"
+ // ANSWER: It prints from 0 to 99 i.e 100 outputs
 
 7: Overstepping array boundaries:
 
