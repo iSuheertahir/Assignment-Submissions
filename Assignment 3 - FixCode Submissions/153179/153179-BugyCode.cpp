@@ -16,6 +16,7 @@
  	{
  		// enter another number to add
  		int nValue;
+   input checkpoint;
  		cout << "Enter another number:";
  		cin >> nValue;
  		cout << endl;
