@@ -140,6 +140,7 @@ do
 {
 //...
 value=10;
-}while(!(value==10) || !(value==20))
+}while(!(value==10) && !(value==20))
 
 "Huh? Even though value is 10 the program loops. Why?"
+ //ANSWER: AND is used to resolve the infinite loop.
