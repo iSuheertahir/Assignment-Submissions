@@ -26,15 +26,18 @@ cout<<count;
 3: Setting a variable to an uninitialized value:
 
 int a, b;
+int sum=0; //initialize sum to '0'
 int sum=a+b;
 cout<<"Enter two numbers to add: ";
-cin>>b;
+cin>>a>>b;
 cout<<"The sum is: "<<sum;
 When Run:
 Enter two numbers to add: 1 3
 The sum is: -1393
 
 "What's wrong with my program?"
+ // ANSWER: 'a' and 'b' varaibles was uninitialized to set value to 'sum' varaible
+// and first input to variable 'a' was missing.
 
 4: Using a single equal sign to check equality:
 
