@@ -1,0 +1,43 @@
+#include<iostream>
+#include<stdio.h>
+#include<conio.h>
+using namespace std;
+
+int main()
+{
+
+	float nSum=0.0;
+	float nNums;
+
+	nNums = 0.0;
+
+	while(true)
+	{
+		
+		float nValue;
+		cout << "Enter another number:";
+		cin >> nValue;
+		cout << endl;
+		while (cin.fail())
+		{
+			cin.clear();
+			cin.ignore();
+			cout << "Invalid Input. Enter an Integer as a Number: " << endl;
+			cin >> nValue;
+		}
+
+		if(nValue < 0)
+		{
+			cout << "Average is: "
+				 << nSum/nNums
+				 << endl;
+			break;
+		}
+
+                nNums++;
+		nSum += nValue;
+	}
+
+	cin.ignore(10000, '\n');
+	return 0;
+}
