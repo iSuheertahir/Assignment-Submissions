@@ -12,13 +12,15 @@ cout<<x;
 
 2: Uninitialized variables:
 
-int count;
+int count=0; // count was not initialized
 while(count<100)
 {
 cout<<count;
+ cout++;   // In order to control this while loop, we need to increment the count variable
 }
 
 "Why doesn't my program enter the while loop?"
+ // ANSWER: Beacuse 'count' wasn't initialized and count wasn't incremented inside the while loop
 
 
 3: Setting a variable to an uninitialized value:
