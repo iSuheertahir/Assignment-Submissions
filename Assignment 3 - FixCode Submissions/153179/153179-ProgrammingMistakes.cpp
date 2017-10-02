@@ -41,8 +41,11 @@ The sum is: -1393
 
 4: Using a single equal sign to check equality:
 
+#include <iostream>
+using namespace std;
+int main()
 char x='Y';
-while(x='Y')
+while(x=='Y') // '==' operator is used for equality
 {
 //...
 cout<<"Continue? (Y/N)";
@@ -50,7 +53,7 @@ cin>>x;
 }
 
 "Why doesn't my loop ever end?"
- 
+// ANSWER: Beacuse '=' is used for equality in while condition 
 
 5: Undeclared Functions:
 
