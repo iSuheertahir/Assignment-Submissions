@@ -33,9 +33,10 @@
  		// if the input number is negative...
  		if(nValue < 0)
  		{
+			//Fix # 4   Type Casing
  		// ... then output the average
  			cout << "Average is: "
- 				 << nSum/nNums
+ 				 << static_cast<float>(nSum)/nNums
  				 << endl;
  			break;
  		}
