@@ -57,6 +57,7 @@ cin>>x;
 
 5: Undeclared Functions:
 
+void menu(); // Declaring Prototype of the function menu()
 int main()
 {
 menu();
@@ -67,7 +68,8 @@ void menu()
 }
 
 "Why do I get an error about menu being unknown?"
-
+// ANSWER: Prototype of the function menu() should be decleared if the function is called before function defination. 
+ 
 6: Extra Semicolons:
 
 for(int x=0; x<100; x++);
