@@ -1,5 +1,6 @@
 // Read code below and try to identify any bug and then fix it.
-
+#include <iostream>
+using namespace std;
 int main()
 {
 	cout << "This program will crash"
