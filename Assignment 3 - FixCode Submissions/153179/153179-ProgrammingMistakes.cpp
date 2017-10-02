@@ -2,13 +2,13 @@
 #include <iostream>
 int main()
 {
- int x; // Fix "x" variable wasnt declared.
+ int x; // .
 cin>>x;
 cout<<x;
 }
 
 "Huh? Why do I get an error?"
- 
+ // Answer : Variable  'x' wasnt declared
 
 2: Uninitialized variables:
 
