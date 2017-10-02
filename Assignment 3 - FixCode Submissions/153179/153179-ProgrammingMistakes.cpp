@@ -1,7 +1,8 @@
 1: Undeclared Variables:
-
+#include <iostream>
 int main()
 {
+ int x; // Fix "x" variable wasnt declared.
 cin>>x;
 cout<<x;
 }
