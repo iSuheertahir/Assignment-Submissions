@@ -20,6 +20,15 @@
  		cout << "Enter another number:";
  		cin >> nValue;
  		cout << endl;
+   
+   // Fix#3 Input validation 
+		if(cin.fail() || cin.get()!='\n')
+		{
+			cin.clear();
+			cin.ignore(999999, '\n');
+			cout << "You have entered invalid number"<<endl;
+			goto InputCheckpoint;
+		}
  
  		// if the input number is negative...
  		if(nValue < 0)
